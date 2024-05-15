@@ -9,7 +9,7 @@
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
             </div>
-            <div class="carousel-inner" style="height:300px">
+            <div class="carousel-inner" style="height:600px">
             <div class="carousel-item active">
                 <img src="..." class="d-block w-100" alt="articolo1">
             </div>
