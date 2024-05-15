@@ -1,3 +1,7 @@
-<div>
+<x-layout title="form vendita" >
+
+    <div>
     {{-- Be like water. --}}
-</div>
+    </div>
+    
+<x-layout >
