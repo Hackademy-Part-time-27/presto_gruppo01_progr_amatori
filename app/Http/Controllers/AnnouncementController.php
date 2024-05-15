@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Announcements;
+use App\Models\Announcement;
 use Illuminate\Http\Request;
 
-class AnnouncementsController extends Controller
+class AnnouncementController extends Controller
 {
     /**
      * Display a listing of the resource.

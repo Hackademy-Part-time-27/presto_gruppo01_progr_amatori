@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\AnnouncementsController;
+use App\Http\Controllers\AnnouncementController;
 use Illuminate\Support\Facades\Route;
 
 /*Route::get('/', function () {
@@ -9,4 +9,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::view('/','pages.index');
 
-Route::get('/nuovo/annuncio', [AnnouncementsController::class, 'create'])->name('announcements.create');
+Route::get('/nuovo/annuncio', [AnnouncementController::class, 'create'])->name('announcements.create');
