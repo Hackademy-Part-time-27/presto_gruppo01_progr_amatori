@@ -1,36 +1,21 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item dropdown">
+<nav class="navbar navbar-expand-lg" style="background-color:rgb(121,183,145)" >
+  <img style="margin-left:10px" src="" alt="logo">
+  <div class="display-flex" style="text-align:center">
+    <h1 class="navbar-brand" style="color:rgb(230,239,230)" href="#">Presto</h1>
+</div>
+  <div class="collapse navbar-collapse display-flex " style="justify-content:flex-end">
+      <button class="btn btn-outline-success" type="submit" style="background-color:rgb(230,239,230)">Accedi</button>
+      <button class="btn btn-outline-success" type="submit" style="background-color:rgb(230,239,230)">Registrati</button>
+      <button class="btn btn-outline-success" type="submit" style="background-color:rgb(230,239,230)">Inserisci annuncio</button>
+      <button class="btn btn-outline-success nav-item dropdown" type="submit" style="background-color:rgb(230,239,230)">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Dropdown
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-        </li>
-      </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
-    </div>
+            <li><a class="dropdown-item" href="#">Profilo</a></li>
+            <li><a class="dropdown-item" href="#">Esci</a></li>
+          </ul7>
+      </button>
   </div>
+  
 </nav>
