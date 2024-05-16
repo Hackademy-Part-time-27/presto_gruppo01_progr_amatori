@@ -13,14 +13,21 @@ class FormAnnuncio extends Component
     public $description;
     #[Validate]
     public $price;
+    public $category;
     public $image;
 
     protected $rules = [
         'title'=>'required|min:8',
         'description'=>'required|min:10',
         'price'=>'required|numeric',
+        'category'=>'required',
     ];
 
+   protected $messages = [
+        'required'=>'Il campo :attribute è richiesto',
+        'min'=>'Il campo :attribute deve avere :min caratteri',
+        'numeric'=>'Il campo :attribute deve essere un numero',
+    ];
 
     public function store()
     {
@@ -32,6 +39,7 @@ class FormAnnuncio extends Component
             'price'=>$this->price,
             'image'=>$this->image,
         ]);
+        session()->flash('success', 'Annuncio Inserito!');
         $this->cleanForm();
     }
 
@@ -46,8 +54,10 @@ class FormAnnuncio extends Component
         $this->description = '';
         $this->price = '';
         $this->image = '';
+        $this->category = '';
 
     }
+    
     public function render()
     {
         return view('livewire.form-annuncio');
