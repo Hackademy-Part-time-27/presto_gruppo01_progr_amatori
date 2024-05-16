@@ -23,6 +23,10 @@ class AnnouncementController extends Controller
         return view ('pages/announcement-create');
     }
 
+    public function showAnnouncement(Announcement $announcement){
+        return view('pages/announcement-show', compact('announcement'));
+    }
+
     /**
      * Store a newly created resource in storage.
      */
