@@ -1,4 +1,17 @@
 <x-layout>
+    <div class="d-flex align-items-center">...</div>
+
+            @foreach ($categories as $category)
+                <button 
+                type="button" 
+                style="border-radius: 12px; padding: 10px 20px; border: none; background-color: #79B791; color: white; cursor: pointer;" 
+                onclick="handleCategoryAction({{ $category->id }})">
+                {{ $category->name }}
+                </button>
+            @endforeach
+
+<div>   
+
     <div class="container">
         <div class="row">
             <div class="col-12 text-center">
