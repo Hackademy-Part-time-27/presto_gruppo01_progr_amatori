@@ -27,7 +27,7 @@
 
             <div>
                 <label for="category">Categoria</label>
-                <select id="category" wire:model="category" class="form-control">
+                <select id="category" wire:model.defer="category" class="form-control">
                     <option value="">Scegli Categoria</option>
                     @foreach ($categories as $category)
                         <option value="{{$category->id}}">{{ $category->name }}</option>

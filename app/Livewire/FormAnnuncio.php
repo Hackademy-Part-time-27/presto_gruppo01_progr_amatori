@@ -2,8 +2,10 @@
 
 namespace App\Livewire;
 
-use App\Models\Announcement;
 use Livewire\Component;
+use App\Models\Category;
+use App\Models\Announcement;
+use Illuminate\Support\Facades\Auth;
 
 class FormAnnuncio extends Component
 {
@@ -32,13 +34,15 @@ class FormAnnuncio extends Component
     public function store()
     {
         $this->validate();
-        
-        Announcement::create([
+        $category = Category::find($this->category);
+        $announcement = $category->announcements()->create([
             'title'=>$this->title,
             'description'=>$this->description,
             'price'=>$this->price,
             'image'=>$this->image,
+            'user_id'=>Auth::id()
         ]);
+
         session()->flash('success', 'Annuncio Inserito!');
         $this->cleanForm();
     }
