@@ -13,3 +13,5 @@ Route::get('/',[FrontController::class, 'welcome'])->name('welcome');
 Route::get('/nuovo/annuncio', [AnnouncementController::class, 'create'])->middleware('auth')->name('announcements.create');
 
 Route::get('/annuncio/{announcement}', [AnnouncementController::class, 'showAnnouncement'])->name('announcement.show');
+
+Route::get('/categoria/{category}', [FrontController::class, 'categoryShow'])->name('categoryShow');
