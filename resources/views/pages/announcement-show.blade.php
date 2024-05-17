@@ -37,7 +37,7 @@
     <div class="container">
         <div class="card-body">
             <h5 class="card-title">{{$announcement->title}}</h5>
-            <p class="card-text">{{$announcement->descrition}}</p>
+            <p class="card-text">{{$announcement->description}}</p>
             <p class="card-text">{{$announcement->price}}&euro;</p>
             <a href="" class="my-2 border-top pt-2 border-dark card-link shadow btn
              btn-success">{{$announcement->category->name}}</a>

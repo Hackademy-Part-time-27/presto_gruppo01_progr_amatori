@@ -22,7 +22,7 @@
                                 <img src="https://picsum.photos/200" class="card-img-top p-3 rounded" alt="">
                                 <div class="card-body">
                                     <h5 class="card-title">{{$announcement->title}}</h5>
-                                    <p class="card-text">{{$announcement->descrition}}</p>
+                                    <p class="card-text">{{$announcement->description}}</p>
                                     <p class="card-text">{{$announcement->price}}€</p>
                                     <a href="{{route('announcement.show', compact('announcement'))}}" class="btn btn-primary shadow">Visualizza</a>
                                     <a href="" class="my-2 border-top pt-2 border-dark card-link shadow btn
