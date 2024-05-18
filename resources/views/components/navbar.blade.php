@@ -2,7 +2,7 @@
 
 <div class="mb-5">
   <nav class="navbar navbar-expand-lg" style="background-color:rgb(121,183,145)" >
-    <img style="margin-left:10px" src="" alt="logo">
+    <img class="me-3 ms-3"  style="margin-left:10px" src="" alt="logo">
     <div class="display-flex" style="text-align:center">
       <h1 class="navbar-brand" style="color:rgb(230,239,230)">
       <a class="text-decoration-none text-light" href="{{route('welcome')}}">Presto</a>
@@ -10,30 +10,27 @@
     </div>
     <div class="collapse navbar-collapse display-flex " style="justify-content:flex-end">
       @auth
-      <button class="btn btn-outline-success" type="submit" style="background-color:rgb(230,239,230)">
-        <a href="{{ route('announcements.create') }}">Inserisci annuncio</a>
+      <button class="btn btn-outline-success me-3" type="submit" style="background-color:rgb(230,239,230)">
+        <a class="text-decoration-none text-dark" href="{{ route('announcements.create') }}">Inserisci annuncio</a>
       </button>
-      <ul class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <div class="dropdown me-3">
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
           {{ auth()->user()->name }}
-        </a>
+        </button>
         <ul class="dropdown-menu dropdown-menu-end">
-          
-          <li><hr class="dropdown-divider"></li>
-          <li>
-            <form action="/logout" method="POST">
-              @csrf
-              <button type="submit" class="dropdown-item">Esci</button>
-            </form>
-          </li>
+          <li><form action="/logout" method="POST">
+            @csrf
+            <button type="submit" class="dropdown-item">Esci</button>
+          </form></li>
         </ul>
-      </ul>
+      </div>
+      
       @else  
-      <button class="btn btn-outline-success" style="background-color:rgb(230,239,230)">
-        <a href="/register">Registrati</a>
+      <button class="btn me-3" style="background-color:rgb(230,239,230); width: 100px">
+        <a class="text-decoration-none text-dark" href="/register">Registrati</a>
       </button>
-      <button class="btn btn-outline-success" style="background-color:rgb(230,239,230)">
-        <a href="/login">Accedi</a>
+      <button class="btn me-3" style="background-color:rgb(230,239,230); width: 100px">
+        <a class="text-decoration-none text-dark" href="/login">Accedi</a>
       </button>
       @endauth  
     </div>  
