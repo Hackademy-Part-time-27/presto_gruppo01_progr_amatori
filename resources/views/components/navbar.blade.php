@@ -14,13 +14,13 @@
         <a class="text-decoration-none text-dark" href="{{ route('announcements.create') }}">Inserisci annuncio</a>
       </button>
       <div class="dropdown me-3">
-        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <button class="btn btn-secondary dropdown-toggle text-uppercase fw-bold" type="button" data-bs-toggle="dropdown" aria-expanded="false">
           {{ auth()->user()->name }}
         </button>
         <ul class="dropdown-menu dropdown-menu-end">
           <li><form action="/logout" method="POST">
             @csrf
-            <button type="submit" class="dropdown-item">Esci</button>
+            <button type="submit" class="dropdown-item text-danger text-uppercase fw-bold">Esci</button>
           </form></li>
         </ul>
       </div>
