@@ -2,7 +2,7 @@
     <div class="d-flex justify-content-center mt-5">...</div>
         <div class="d-flex justify-content-evenly mb-5">
             @foreach ($categories as $category)
-                <button type="button" style="border-radius: 12px; padding: 10px 20px; border: none;
+                <button class="btn text-uppercase fw-bold shadow" type="button" style=" width: 160px;
                         background-color: #79B791; color: white; cursor: pointer;">
                 <a class="text-decoration-none text-light" href="{{ route('categoryShow', compact('category')) }}">{{($category->name)}}</a>
                 </button>
@@ -24,9 +24,11 @@
                                     <h5 class="card-title">{{$announcement->title}}</h5>
                                     <p class="card-text">{{$announcement->description}}</p>
                                     <p class="card-text">{{$announcement->price}}€</p>
-                                    <a href="{{route('announcement.show', compact('announcement'))}}" class="btn btn-primary shadow">Visualizza</a>
-                                    <a href="" class="my-2 border-top pt-2 border-dark card-link shadow btn
-                                     btn-success">{{$announcement->category->name}}</a>
+                                    <a href="{{route('announcement.show', compact('announcement'))}}" 
+                                            class="btn" style="background-color: #79B791; color: white; cursor: pointer;">Dettagli</a>
+                                    <a href="{{ route('categoryShow', compact('category')) }}" 
+                                            class="btn" style="background-color: #79B791; color: white; cursor: pointer; 
+                                            width: 160px">{{$announcement->category->name}}</a>
                                      <p class="card-footer">Pubblicato il: {{$announcement->created_at->format('d/m/Y')}}</p>
                                 </div>
                             </div>
