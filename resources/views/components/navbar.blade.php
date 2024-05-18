@@ -1,8 +1,12 @@
+
+
 <div class="mb-5">
   <nav class="navbar navbar-expand-lg" style="background-color:rgb(121,183,145)" >
     <img style="margin-left:10px" src="" alt="logo">
     <div class="display-flex" style="text-align:center">
-      <h1 class="navbar-brand" style="color:rgb(230,239,230)" href="#">Presto</h1>
+      <h1 class="navbar-brand" style="color:rgb(230,239,230)">
+      <a class="text-decoration-none text-light" href="{{route('welcome')}}">Presto</a>
+      </h1>
     </div>
     <div class="collapse navbar-collapse display-flex " style="justify-content:flex-end">
       @auth
