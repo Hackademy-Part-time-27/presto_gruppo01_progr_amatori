@@ -12,7 +12,8 @@
                                 <h5 class="card-title">{{$announcement->title}}</h5>
                                 <p class="card-text">{{$announcement->descrition}}</p>
                                 <p class="card-text">{{$announcement->price}}€</p>
-                                <a href="{{route('announcement.show', compact('announcement'))}}" class="btn btn-primary shadow">Visualizza</a>
+                                <a href="{{route('announcement.show', compact('announcement'))}}"
+                                    class="btn mb-3" style="background-color: #79B791; color: white; cursor: pointer;">Dettagli</a>
                                 <p class="card-footer">Pubblicato il: {{$announcement->created_at->format('d/m/Y')}}</p>
                             </div>
                         </div>

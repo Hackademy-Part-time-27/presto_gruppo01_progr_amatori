@@ -25,9 +25,9 @@
                                     <p class="card-text">{{$announcement->description}}</p>
                                     <p class="card-text">{{$announcement->price}}€</p>
                                     <a href="{{route('announcement.show', compact('announcement'))}}" 
-                                            class="btn" style="background-color: #79B791; color: white; cursor: pointer;">Dettagli</a>
+                                            class="btn mb-3" style="background-color: #79B791; color: white; cursor: pointer;">Dettagli</a>
                                     <a href="{{ route('categoryShow', compact('category')) }}" 
-                                            class="btn" style="background-color: #79B791; color: white; cursor: pointer; 
+                                            class="btn mb-3" style="background-color: #79B791; color: white; cursor: pointer; 
                                             width: 160px">{{$announcement->category->name}}</a>
                                      <p class="card-footer">Pubblicato il: {{$announcement->created_at->format('d/m/Y')}}</p>
                                 </div>

@@ -1,23 +1,23 @@
 <x-layout title="Pagina Annuncio">
     
-    <div>
+    <div class="col-12 text-center">
         <h1>{{ $announcement->title }}</h1>
     </div>
 
-    <div class="container">
+    <div class="container mt-4">
         <div class="row">
-            <div id="showCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div id="showCarousel" class="carousel" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <img src="https://picsum.photos/1200/300" class="img-fluid p-3" alt="">
                     </div>
-                    <div class="carousel-item active">
+                    <div class="carousel-item">
                         <img src="https://picsum.photos/1200/300" class="img-fluid p-3" alt="">
                     </div>
-                    <div class="carousel-item active">
+                    <div class="carousel-item">
                         <img src="https://picsum.photos/1200/300" class="img-fluid p-3" alt="">
                     </div>
-                    <div class="carousel-item active">
+                    <div class="carousel-item">
                         <img src="https://picsum.photos/1200/300" class="img-fluid p-3" alt="">
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#showCarousel"
@@ -36,11 +36,11 @@
     </div>
     <div class="container">
         <div class="card-body">
-            <h5 class="card-title">{{$announcement->title}}</h5>
+            <h5 class="card-title mt-2 mb-2">{{$announcement->title}}</h5>
             <p class="card-text">{{$announcement->description}}</p>
             <p class="card-text">{{$announcement->price}}&euro;</p>
-            <a href="" class="my-2 border-top pt-2 border-dark card-link shadow btn
-             btn-success">{{$announcement->category->name}}</a>
+            <a href="" class="btn mb-3" style="background-color: #79B791; color: white; cursor: pointer; 
+            width: 160px">{{$announcement->category->name}}</a>
              <p class="card-footer">Pubblicato il: {{$announcement->created_at->format('d/m/Y')}} <br>
              Autore: {{$announcement->user->name ?? ''}}</p>
     
