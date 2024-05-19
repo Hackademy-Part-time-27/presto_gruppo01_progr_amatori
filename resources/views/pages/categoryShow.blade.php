@@ -23,7 +23,8 @@
                         <h2>Non sono ancora presenti annunci per questa categoria!</h2>
                         <h3>Vuoi essere il primo?</h3>
                         <h3>Pubblicalo tu!</h3> 
-                        <a href="{{route('announcements.create')}}"class="btn btn-success shadow">Nuovo Annuncio</a>
+                        <a href="{{route('announcements.create')}}"class="btn text-uppercase fw-bold shadow" style=" width: 160px;
+                                background-color: #79B791; color: white; cursor: pointer;">Nuovo Annuncio</a>
                         
                     </div>
                     
