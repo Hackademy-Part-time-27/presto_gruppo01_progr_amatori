@@ -12,5 +12,6 @@
 <body style="background-color:rgb(230,239,230)"> 
     <x-navbar></x-navbar>
     {{ $slot }}
+    <x-footer></x-footer>
 </body>
 </html>
