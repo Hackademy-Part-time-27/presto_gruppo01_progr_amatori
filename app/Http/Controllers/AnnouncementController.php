@@ -28,6 +28,11 @@ class AnnouncementController extends Controller
         return view('pages/announcement-show', compact('announcement'));
     }
 
+    public function indexAnnouncement(){
+        $announcements = Announcement::where('is_accepted', true)->paginate(6);
+        return view('announcements.index', compact('announcements'));
+    }
+
     /**
      * Store a newly created resource in storage.
      */

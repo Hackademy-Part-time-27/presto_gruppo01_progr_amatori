@@ -39,7 +39,7 @@
             <h5 class="card-title mt-2 mb-2">{{$announcement->title}}</h5>
             <p class="card-text">{{$announcement->description}}</p>
             <p class="card-text">{{$announcement->price}}&euro;</p>
-            <a href="" class="btn mb-3" style="background-color: #79B791; color: white; cursor: pointer; 
+            <a href="{{ route('categoryShow', compact('category')) }}" class="btn mb-3" style="background-color: #79B791; color: white; cursor: pointer; 
             width: 160px">{{$announcement->category->name}}</a>
              <p class="card-footer">Pubblicato il: {{$announcement->created_at->format('d/m/Y')}} <br>
              Autore: {{$announcement->user->name ?? ''}}</p>
