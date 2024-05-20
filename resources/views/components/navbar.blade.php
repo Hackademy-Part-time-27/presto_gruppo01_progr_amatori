@@ -2,10 +2,12 @@
 
 <div class="mb-5">
   <nav class="navbar navbar-expand-lg" style="background-color:rgb(121,183,145)" >
-    <img class="me-3 ms-3"  style="margin-left:10px" src="" alt="logo">
+    
     <div class="display-flex" style="text-align:center">
       <h1 class="navbar-brand" style="color:rgb(230,239,230)">
-      <a class="text-decoration-none text-light" href="{{route('welcome')}}">Presto</a>
+      <a href="{{route('welcome')}}">
+        <img class="img-fluid ms-4"  style="margin-left:10px; width: 130px" src="{{ asset('img/logopresto.png') }}" alt="logo">
+      </a>
       </h1>
     </div>
     <div class="collapse navbar-collapse display-flex " style="justify-content:flex-end">

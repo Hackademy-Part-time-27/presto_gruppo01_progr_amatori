@@ -13,7 +13,6 @@
     <div class="container">
         <div class="row">
             <div class="col-12 text-center">
-                <h1>Presto</h1>
                 <h2>Ultimi annunci inseriti</h2>
                 <div class="row">
                     @foreach ($announcements as $announcement)
