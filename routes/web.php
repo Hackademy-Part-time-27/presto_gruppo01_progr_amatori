@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FrontController;
+use App\Http\Controllers\RevisorController;
 use App\Http\Controllers\AnnouncementController;
 
 /*Route::get('/', function () {

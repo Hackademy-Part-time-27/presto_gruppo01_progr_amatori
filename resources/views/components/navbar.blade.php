@@ -20,6 +20,16 @@
           {{ auth()->user()->name }}
         </button>
         <ul class="dropdown-menu dropdown-menu-end">
+          @if (Auth::user()->is_revisor)
+            <li class="nav-item">
+              <a class="nav-link btn btn-outline-success btn-sm position-relative"
+                  aria-current="page" href="{{ route('revisor.index') }}">Zona revisore
+                <span class="position-absolute top-0 start-0 translate-middle badge rounded-pill bg-danger">
+                {{ App\Models\Announcement::toBeRevisionedCount() }}
+                <span class="visually-hidden">Messaggi non letti</span>
+              </a>
+            </li>
+          @endif
           <li><form action="/logout" method="POST">
             @csrf
             <button type="submit" class="dropdown-item text-danger text-uppercase fw-bold">Esci</button>
