@@ -25,4 +25,7 @@ Route::patch('/rifiuta/annuncio/{announcement}', [RevisorController::class, 'rej
 
 Route::get('/richiesta/revisore', [RevisorController::class, 'becomeRevisor'])->middleware('auth')->name('become.revisor');
 
+Route::get('/form/richiesta/revisore', [RevisorController::class, 'formRevisor'])->middleware('auth')->name('form.revisor');
+
 Route::get('/rendi/revisore/{user}', [RevisorController::class, 'makeRevisor'])->name('make.revisor');
+
