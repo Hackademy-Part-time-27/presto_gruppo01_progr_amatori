@@ -7,7 +7,7 @@
                 <a href="{{route('welcome')}}" class="nav-link px-2 text-muted">Home</a>
             </li>
             <li class="nav-item">
-                <a href="" class="nav-link px-2 text-muted">Lavora con noi</a>
+                <a href="{{route('become.revisor')}}" class="nav-link px-2 text-muted">Lavora con noi</a>
             </li>
             <li class="nav-item">
                 <a href="" class="nav-link px-2 text-muted">Privacy</a>
