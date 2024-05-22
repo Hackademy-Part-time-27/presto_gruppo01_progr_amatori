@@ -11,8 +11,8 @@
       </h1>
     </div>
     <div class="collapse navbar-collapse display-flex " style="justify-content:flex-end">
-      <form action="{{ route('announcements.index') }}" method="GET" class="d-flex" role="search" style="justify-content:flex-end">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      <form action="{{ route('announcements.search') }}" method="GET" class="d-flex" role="search" style="justify-content:flex-end">
+        <input class="form-control me-2" name="searched" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success me-3" type="submit">Search</button>
       </form>
       @auth
