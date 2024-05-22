@@ -23,7 +23,7 @@
           @if (Auth::user()->is_revisor)
             <li class="nav-item">
               <a class="nav-link btn btn-sm position-relative text-uppercase fw-bold"
-                  aria-current="page" href="{{ route('revisor.index') }}">Revisor
+                  aria-current="page" href="{{ route('revisor.index') }}">Zona revisore
                 <span class="position-absolute top-0 start-0 translate-middle badge rounded-pill bg-danger">
                 {{ App\Models\Announcement::toBeRevisionedCount() }}
                 <span class="visually-hidden">Messaggi non letti</span>
