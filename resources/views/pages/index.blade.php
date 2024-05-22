@@ -18,7 +18,7 @@
             <div class="col-12 text-center">
                 <h2>Annunci</h2>
                 <div class="row">
-                    @foreach ($announcements as $announcement)
+                    @forelse ($announcements as $announcement)
                         <div class="col-12 col-md-4 my-4">
                             <div class="card shadow" style="width: 400px;">
                                 <img src="https://picsum.photos/200" class="card-img-top p-3 rounded" alt="">
@@ -35,7 +35,15 @@
                                 </div>
                             </div>
                         </div>
-                    @endforeach
+                    @empty
+                    <div class="col-12">
+                        <div class="alert alert-warning py-3 shadow">
+                            <p class="lead">Nessun risultato trovato, riprova!</p>
+                        </div>
+                    </div>
+                        
+                    
+                    @endforelse
 
                 </div>
             </div>
