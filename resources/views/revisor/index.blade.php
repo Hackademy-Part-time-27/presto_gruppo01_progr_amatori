@@ -8,6 +8,7 @@
         </div>
     </div>
 </div>
+<x-success></x-success>
 @if($announcement_to_check)
     <div class="container mt-4">
         <div class="row">

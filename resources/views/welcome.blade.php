@@ -10,6 +10,8 @@
         </div>        
 <div>   
 
+    <x-success></x-success>
+
     <div class="container">
         <div class="row">
             <div class="col-12 text-center">
