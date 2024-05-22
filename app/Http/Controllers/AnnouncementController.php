@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Announcement;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class AnnouncementController extends Controller
@@ -12,7 +13,9 @@ class AnnouncementController extends Controller
      */
     public function index()
     {
-        //
+        $announcements = Announcement::where('is_accepted', true)->orderBy('created_at', 'desc')->get();
+
+        return view ('pages/index', compact('announcements'));
     }
 
     /**
