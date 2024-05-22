@@ -13,7 +13,7 @@
     <div class="collapse navbar-collapse display-flex " style="justify-content:flex-end">
       @auth
       <button class="btn btn-outline-success me-3" type="submit" style="background-color:rgb(230,239,230)">
-        <a class="text-decoration-none text-dark" href="{{ route('announcements.create') }}">Inserisci annuncio</a>
+        <a class="text-decoration-none text-dark fw-bold" href="{{ route('announcements.create') }}">Inserisci annuncio</a>
       </button>
       <div class="dropdown me-3">
         <button class="btn btn-secondary dropdown-toggle text-uppercase fw-bold" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -22,14 +22,15 @@
         <ul class="dropdown-menu dropdown-menu-end">
           @if (Auth::user()->is_revisor)
             <li class="nav-item">
-              <a class="nav-link btn btn-outline-success btn-sm position-relative"
-                  aria-current="page" href="{{ route('revisor.index') }}">Zona revisore
+              <a class="nav-link btn btn-sm position-relative text-uppercase fw-bold"
+                  aria-current="page" href="{{ route('revisor.index') }}">Revisor
                 <span class="position-absolute top-0 start-0 translate-middle badge rounded-pill bg-danger">
                 {{ App\Models\Announcement::toBeRevisionedCount() }}
                 <span class="visually-hidden">Messaggi non letti</span>
               </a>
             </li>
           @endif
+          <li><hr class="dropdown-divider"></li>
           <li><form action="/logout" method="POST">
             @csrf
             <button type="submit" class="dropdown-item text-danger text-uppercase fw-bold">Esci</button>
