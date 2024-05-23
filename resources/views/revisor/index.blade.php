@@ -10,21 +10,21 @@
 </div>
 <x-success></x-success>
 @if($announcement_to_check)
-    <div class="container mt-4">
+    <div class="container mt-4  ">
         <div class="row">
             <div id="showCarousel" class="carousel" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="https://picsum.photos/1200/300" class="img-fluid p-3" alt="">
+                        <img src="https://picsum.photos/1400/300" class="img-fluid p-3" alt="">
                     </div>
                     <div class="carousel-item">
-                        <img src="https://picsum.photos/1200/300" class="img-fluid p-3" alt="">
+                        <img src="https://picsum.photos/1400/300" class="img-fluid p-3" alt="">
                     </div>
                     <div class="carousel-item">
-                        <img src="https://picsum.photos/1200/300" class="img-fluid p-3" alt="">
+                        <img src="https://picsum.photos/1400/300" class="img-fluid p-3" alt="">
                     </div>
                     <div class="carousel-item">
-                        <img src="https://picsum.photos/1200/300" class="img-fluid p-3" alt="">
+                        <img src="https://picsum.photos/1400/300" class="img-fluid p-3" alt="">
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#showCarousel"
                     data-bs-slide="prev">
@@ -41,7 +41,7 @@
         </div>
     </div>
     <div class="container">
-        <div class="card-body">
+        <div class="card-body ms-3">
             <h5 class="card-title mt-2 mb-2">{{$announcement_to_check->title}}</h5>
             <p class="card-text">{{$announcement_to_check->description}}</p>
             <p class="card-text">{{$announcement_to_check->price}}&euro;</p>
@@ -50,8 +50,8 @@
 
         </div>
     </div>
-    <div class="row">
-        <div class="col-12 col-md-6">
+    <div class="row ">
+        <div class="col-12 col-md-6 text-end">
             <form action="{{ route('revisor.accept_announcement',['announcement'=>$announcement_to_check]) }}" 
                 method="POST">
                 @csrf
@@ -59,7 +59,7 @@
                 <button type="submit" class="btn btn-success shadow">Accetta</button>
             </form>
         </div>
-        <div class="col-12 col-md-6 text-end">
+        <div class="col-12 col-md-6 ">
             <form action="{{ route('revisor.reject_announcement',['announcement'=>$announcement_to_check]) }}" 
                 method="POST">
                 @csrf
