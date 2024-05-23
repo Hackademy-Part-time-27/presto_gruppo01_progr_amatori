@@ -4,7 +4,7 @@
         <div class="col-12 text-center">
             <h1>Annunci della categoria: {{$category->name}}</h1>
             <div class="row">
-                @forelse ($category->announcements as $announcement)
+                @forelse ($acceptedAnnouncements as $announcement)
                     <div class="col-12 col-md-4 my-4">
                         <div class="card shadow" style="width: 400px;">
                             <img src="https://picsum.photos/200" class="card-img-top p-3 rounded" alt="">

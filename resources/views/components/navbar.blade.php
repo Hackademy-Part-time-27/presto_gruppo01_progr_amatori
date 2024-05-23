@@ -12,9 +12,9 @@
     </div>
     <div class="collapse navbar-collapse display-flex " style="justify-content:flex-end">
       <form action="{{ route('announcements.search') }}" method="GET" class="d-flex" role="search" style="justify-content:flex-end">
-        <input class="form-control me-2" name="searched" type="search" placeholder="Cerca" aria-label="Search">
-        <button  type="submit" style="background-color:rgb(121,183,145); border:none; width:70px">
-          <img class="img-fluid" style="width:100px;" src="{{ asset('img/lente2.png') }}" alt="">
+        <input class="form-control " name="searched" type="search" placeholder="Cerca" aria-label="Search">
+        <button class="" type="submit" style="background-color:rgb(121,183,145); border:none; width:110px">
+          <img class="img-fluid" src="{{ asset('img/lente2.png') }}" alt="">
         </button>
       </form>
       @auth

@@ -17,13 +17,14 @@ class FrontController extends Controller
 
     public function categoryShow(Category $category)
     {
-        return view('pages.categoryShow', compact('category'));
+        $acceptedAnnouncements = $category->announcements()->where('is_accepted', true)->orderBy('created_at', 'desc')->get();
+        return view('pages.categoryShow', compact('category', 'acceptedAnnouncements'));
     }
 
     public function searchAnnouncements(Request $request)
     {
 
-        $announcements = Announcement::search($request->searched)->where('is_accepted', true)->paginate(10);
+        $announcements = Announcement::search($request->searched)->where('is_accepted', true)->orderBy('created_at', 'desc')->paginate(10);
         
         return view('pages/index', compact('announcements'));
     }
