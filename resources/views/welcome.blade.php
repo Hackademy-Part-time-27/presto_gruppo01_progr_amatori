@@ -30,7 +30,7 @@
                                     <a href="{{ route('categoryShow', compact('category')) }}" 
                                             class="btn mb-3" style="background-color: #79B791; color: white; cursor: pointer; 
                                             width: 160px">{{$announcement->category->name}}</a>
-                                     <p class="card-footer">Pubblicato il: {{$announcement->created_at->format('d/m/Y')}}</p>
+                                     <p class="card-footer">{{__('ui.publication')}} {{$announcement->created_at->format('d/m/Y')}}</p>
                                 </div>
                             </div>
                         </div>
