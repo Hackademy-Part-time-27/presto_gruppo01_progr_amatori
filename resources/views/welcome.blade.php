@@ -15,7 +15,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12 text-center">
-                <h2>Ultimi annunci inseriti</h2>
+                <h2>{{__('ui.allAnnouncements')}}</h2>
                 <div class="row">
                     @foreach ($announcements as $announcement)
                         <div class="col-12 col-md-4 my-4">

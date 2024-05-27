@@ -17,6 +17,23 @@
           <img class="img-fluid" src="{{ asset('img/lente2.png') }}" alt="">
         </button>
       </form>
+    <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Lingua
+        </button>
+          <ul class="dropdown-menu">
+          <li class="dropdown-item"> 
+            <x-_locale lang='it' />
+          </li>
+          <li class="dropdown-item"> 
+            <x-_locale lang='en' />
+          </li>
+          <li class="dropdown-item"> 
+            <x-_locale lang='es' />
+          </li>
+        </ul>
+    </div>  
+
       @auth
       <button class="btn btn-outline-success me-3" type="submit" style="background-color:rgb(230,239,230)">
         <a class="text-decoration-none text-dark fw-bold" href="{{ route('announcements.create') }}">Inserisci annuncio</a>
