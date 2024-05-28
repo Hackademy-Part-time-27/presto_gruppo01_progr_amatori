@@ -32,6 +32,29 @@
                         <option value="{{$category->id}}">{{ $category->name }}</option>
                     @endforeach
                 </select>
+                <div class="mb-3">
+                    <input wire:model="temporary_images" type="file" name="images" multiple class="form-control shadow 
+                    @error('temporary_images.*') is-invalid @enderror" placeholder="Img"/>
+                    @error('temporary_images.*')
+                        <p class="text-danger mt-2">{{$error}}</p>
+                    @enderror
+                </div>
+                @if (!empty($images))
+                    <div class="row">
+                        <div class="col-12">
+                            <p>Anteprima immagine</p>
+                            <div class="row border border-4 border-info rounded shadow py-4">
+                                @foreach ($images as $key => $image)
+                                    <div class="col my-3">
+                                        <div class="img-preview mx-auto shadow rounded" 
+                                        style="background-image: url({{$image->temporaryUrl}})"></div>
+                                        <button type="button" class="btn btn-danger shadow d-block text-center mt-2 mx-auto" 
+                                        wire:click="remove({{$key}})">Cancella</button>
+                                    </div>
+                                @endforeach    
+                            </div>
+                        </div>
+                    </div>           
             </div>
             <div class="d-flex justify-content-center">
             <button type="submit" class="btn text-uppercase fw-bold shadow" style=" width: 160px;
