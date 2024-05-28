@@ -5,8 +5,8 @@ namespace App\Livewire;
 use Livewire\Component;
 use App\Models\Category;
 use App\Models\Announcement;
-use Livewire\WithFileUploads;
 use Illuminate\Support\Facades\Auth;
+use Livewire\Features\SupportFileUploads\WithFileUploads;
 
 class FormAnnuncio extends Component
 {   
