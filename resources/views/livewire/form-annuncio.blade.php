@@ -32,8 +32,9 @@
                         <option value="{{$category->id}}">{{ $category->name }}</option>
                     @endforeach
                 </select>
-                <div class="mb-3">
-                    <input wire:model="temporary_images" type="file" name="images" multiple class="form-control shadow 
+                <div class="mb-3 mt-4 ">
+                    <label for="image" class="text-uppercase fw-bold">Immagini</label>
+                    <input wire:model="temporary_images" type="file" name="images" multiple class="form-control
                     @error('temporary_images.*') is-invalid @enderror" placeholder="Img"/>
                     @error('temporary_images.*')
                         <p class="text-danger mt-2">{{$error}}</p>
@@ -54,7 +55,8 @@
                                 @endforeach    
                             </div>
                         </div>
-                    </div>           
+                    </div> 
+                @endif          
             </div>
             <div class="d-flex justify-content-center">
             <button type="submit" class="btn text-uppercase fw-bold shadow" style=" width: 160px;
