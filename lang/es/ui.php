@@ -1,6 +1,7 @@
 <?php
 return [
-    'allAnnouncements'=>'Los ultimos anuncios',
+    'allAnnouncements'=>'Todos los anuncios',
+    'lastAnnouncements'=>'Los ultimos anuncios',
     'welcome'=>'Bienvenido a Presto.it',
     'publication'=>'Publicado en:',
 ];
