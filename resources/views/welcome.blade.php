@@ -20,8 +20,7 @@
                     @foreach ($announcements as $announcement)
                         <div class="col-12 col-md-4 my-4">
                             <div class="card shadow" style="width: 400px;">
-                                <img src="{{!$announcement->images()->get()->isEmpty() ? Storage::url($announcement->images()->first()
-                                        ->path) : 'https://picsum.photos/200'}}" class="card-img-top p-3 rounded" alt="">
+                                <img src="{{!$announcement->images()->get()->isEmpty() ? $announcement->images()->first()->getUrl(400, 300) : 'https://picsum.photos/200'}}" class="card-img-top p-3 rounded" alt="">
                                 <div class="card-body">
                                     <h5 class="card-title">{{$announcement->title}}</h5>
                                     <p class="card-text">{{$announcement->description}}</p>
