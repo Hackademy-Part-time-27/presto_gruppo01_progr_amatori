@@ -11,7 +11,7 @@
                     <div class="carousel-inner">
                         @foreach ($announcement->images as $image)
                             <div class="carousel-item @if($loop->first)active @endif">
-                                <img src="{{Storage::url($image->path)}}" alt="" class="img-fluid p-3 rounded">
+                                <img src="{{$announcement->images()->first()->getUrl(400, 300) }}" alt="" class="img-fluid p-3 rounded">
                             </div>
                         @endforeach
                     </div>
@@ -51,8 +51,7 @@
             <p class="card-text">{{$announcement->description}}</p>
             <p class="card-text">{{$announcement->price}}&euro;</p>
             <p class="card-text">{{$announcement->category->name}}</p>
-             <p class="card-footer">Pubblicato il: {{$announcement->created_at->format('d/m/Y')}} <br>
-             Autore: {{$announcement->user->name ?? ''}}</p>
+             <p class="card-footer">Pubblicato il: {{$announcement->created_at->format('d/m/Y')}} </p>
     
         </div>
     </div>

@@ -17,7 +17,7 @@
                     <div class="carousel-inner">
                         @foreach ($announcement_to_check->images as $image)
                             <div class="carousel-item @if($loop->first)active @endif">
-                                <img src="{{Storage::url($image->path)}}" alt="" class="img-fluid p-3 rounded">
+                                <img src="{{$announcement_to_check->images()->first()->getUrl(400, 300) }}" alt="" class="img-fluid p-3 rounded">
                             </div>
                         @endforeach
                     </div>
@@ -56,8 +56,7 @@
             <h5 class="card-title mt-2 mb-2">{{$announcement_to_check->title}}</h5>
             <p class="card-text">{{$announcement_to_check->description}}</p>
             <p class="card-text">{{$announcement_to_check->price}}&euro;</p>
-            <p class="card-footer">Pubblicato il: {{$announcement_to_check->created_at->format('d/m/Y')}} <br>
-            Autore: {{$announcement_to_check->user->name ?? ''}}</p>
+            <p class="card-footer">Pubblicato il: {{$announcement_to_check->created_at->format('d/m/Y')}} </p>
 
         </div>
     </div>
