@@ -24,13 +24,14 @@
                     @forelse ($announcements as $announcement)
                         <div class="col-12 col-md-4 my-4">
                             <div class="card shadow" style="width: 400px;">
-                                <img src="{{!$announcement->images()->get()->isEmpty() ? $announcement->images()->first()->getUrl(400, 300) : 'https://picsum.photos/200'}}"  class="card-img-top p-3 rounded" alt="">
+                                <img src="{{!$announcement->images()->get()->isEmpty() ? $announcement->images()->first()->getUrl(400, 300) 
+                                : 'https://picsum.photos/200'}}"  class="card-img-top p-3 rounded" alt="">
                                 <div class="card-body">
                                     <h5 class="card-title">{{$announcement->title}}</h5>
                                     <p class="card-text">{{$announcement->description}}</p>
                                     <p class="card-text">{{$announcement->price}}€</p>
                                     <a href="{{route('announcement.show', compact('announcement'))}}" 
-                                            class="btn mb-3" style="background-color: #79B791; color: white; cursor: pointer;">Dettagli</a>
+                                            class="btn mb-3 me-2" style="background-color: #ffb300; color: black; cursor: pointer;">Dettagli</a>
                                     <a href="{{ route('categoryShow', compact('category')) }}" 
                                             class="btn mb-3" style="background-color: #79B791; color: white; cursor: pointer; 
                                             width: 160px">{{$announcement->category->name}}</a>
