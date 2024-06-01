@@ -9,7 +9,7 @@
                 </button>
             @endforeach
         </div>        
-    <div>   
+    </div>   
 
     <x-success></x-success>
 
