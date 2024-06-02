@@ -1,4 +1,15 @@
 <x-layout title="Pagina Annuncio">
+
+    <div class="d-flex justify-content-center mt-1"></div>
+        <div class="d-flex justify-content-evenly mb-5">
+            @foreach ($categories as $category)
+                <button class="btn text-uppercase fw-bold shadow" type="button" style=" width: 160px;
+                        background-color: #79B791; color: white; cursor: pointer;">
+                <a class="text-decoration-none text-light" href="{{ route('categoryShow', compact('category')) }}">{{($category->name)}}</a>
+                </button>
+            @endforeach
+        </div>        
+    </div> 
     
     <div class="col-12 text-center">
         <h1>{{ $announcement->title }}</h1>

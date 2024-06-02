@@ -1,6 +1,6 @@
 
 <x-layout>
-    <div class="d-flex justify-content-center mt-5"></div>
+    <div class="d-flex justify-content-center mt-1"></div>
         <div class="d-flex justify-content-evenly mb-5">
             @foreach ($categories as $category)
                 <button class="btn text-uppercase fw-bold shadow" type="button" style=" width: 160px;

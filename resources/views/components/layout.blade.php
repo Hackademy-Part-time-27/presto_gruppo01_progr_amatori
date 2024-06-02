@@ -11,7 +11,9 @@
 </head>
 <body style="background-color:rgb(230,239,230)"> 
     <x-navbar></x-navbar>
-    {{ $slot }}
+    <main>
+        {{ $slot }}
+    </main>
     <x-footer></x-footer>
 </body>
 </html>

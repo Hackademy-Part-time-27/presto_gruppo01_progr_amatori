@@ -11,16 +11,19 @@
       </h1>
     </div>
     <div class="collapse navbar-collapse display-flex " style="justify-content:flex-end">
-      <form action="{{ route('announcements.search') }}" method="GET" class="d-flex" role="search" style="justify-content:flex-end">
+      <form action="{{ route('announcements.search') }}" method="GET" class="d-flex" role="search" style="justify-content:flex-end; width:230px">
         <input class="form-control " name="searched" type="search" placeholder="Cerca" aria-label="Search">
-        <button class="" type="submit" style="background-color:rgb(121,183,145); border:none; width:110px">
+        <button type="submit" style="background-color:rgb(121,183,145); border:none; width:110px">
           <img class="img-fluid" src="{{ asset('img/lente2.png') }}" alt="">
         </button>
       </form>
+      <button type="button" class="btn btn-outline-success me-3" style="background-color:rgb(230,239,230)">
+        <a class="text-decoration-none text-dark fw-bold" href="{{ route('welcome') }}">ULTIMI ANNUNCI</a>
+      </button>
 
       @auth
       <button class="btn btn-outline-success me-3" type="submit" style="background-color:rgb(230,239,230)">
-        <a class="text-decoration-none text-dark fw-bold" href="{{ route('announcements.create') }}">Inserisci annuncio</a>
+        <a class="text-decoration-none text-dark fw-bold" href="{{ route('announcements.create') }}">INSERISCI ANNUNCIO</a>
       </button>
       <div class="dropdown me-1">
         <button class="btn btn-secondary dropdown-toggle text-uppercase fw-bold" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -38,10 +41,12 @@
             </li>
           @endif
           <li><hr class="dropdown-divider"></li>
-          <li><form action="/logout" method="POST">
+          <li>
+            <form action="/logout" method="POST">
             @csrf
             <button type="submit" class="dropdown-item text-danger text-uppercase fw-bold">Esci</button>
-          </form></li>
+            </form>
+          </li>
         </ul>
       </div>
       
