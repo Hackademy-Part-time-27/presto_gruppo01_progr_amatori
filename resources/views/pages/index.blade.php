@@ -31,7 +31,7 @@
                                     <p class="card-text">{{$announcement->description}}</p>
                                     <p class="card-text">{{$announcement->price}}€</p>
                                     <a href="{{route('announcement.show', compact('announcement'))}}" 
-                                            class="btn mb-3 me-2" style="background-color: #ffb300; color: black; cursor: pointer;">Dettagli</a>
+                                            class="btn mb-3 me-2" style="background-color: #ffb300; color: black; cursor: pointer;">{{__('ui.details')}}</a>
                                     <a href="{{ route('categoryShow', compact('category')) }}" 
                                             class="btn mb-3" style="background-color: #79B791; color: white; cursor: pointer; 
                                             width: 160px">{{$announcement->category->name}}</a>

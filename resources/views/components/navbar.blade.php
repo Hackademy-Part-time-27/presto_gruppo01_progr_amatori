@@ -12,13 +12,13 @@
     </div>
     <div class="collapse navbar-collapse display-flex " style="justify-content:flex-end">
       <form action="{{ route('announcements.search') }}" method="GET" class="d-flex" role="search" style="justify-content:flex-end; width:230px">
-        <input class="form-control " name="searched" type="search" placeholder="Cerca" aria-label="Search">
+        <input class="form-control " name="searched" type="search" placeholder="{{__('ui.search')}}" aria-label="Search">
         <button type="submit" style="background-color:rgb(121,183,145); border:none; width:110px">
           <img class="img-fluid" src="{{ asset('img/lente2.png') }}" alt="">
         </button>
       </form>
       <button type="button" class="btn btn-outline-success me-3" style="background-color:rgb(230,239,230)">
-        <a class="text-decoration-none text-dark fw-bold" href="{{ route('welcome') }}">ULTIMI ANNUNCI</a>
+        <a class="text-decoration-none text-dark fw-bold" href="{{ route('welcome') }}">{{__('ui.lastAnnouncementsBtn')}}</a>
       </button>
 
       @auth
@@ -52,10 +52,10 @@
       
       @else  
       <button class="btn me-3" style="background-color:rgb(230,239,230); width: 100px">
-        <a class="text-decoration-none text-dark" href="/register">Registrati</a>
+        <a class="text-decoration-none text-dark" href="/register">{{__('ui.register')}}</a>
       </button>
       <button class="btn me-3" style="background-color:rgb(230,239,230); width: 100px">
-        <a class="text-decoration-none text-dark" href="/login">Accedi</a>
+        <a class="text-decoration-none text-dark" href="/login">{{__('ui.login')}}</a>
       </button>
       @endauth  
     </div>
