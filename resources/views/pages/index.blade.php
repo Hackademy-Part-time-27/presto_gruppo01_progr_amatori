@@ -5,7 +5,7 @@
             @foreach ($categories as $category)
                 <button class="btn text-uppercase fw-bold shadow" type="button" style=" width: 160px;
                         background-color: #79B791; color: white; cursor: pointer;">
-                <a class="text-decoration-none text-light" href="{{ route('categoryShow', compact('category')) }}">{{($category->name)}}</a>
+                <a class="text-decoration-none text-light" href="{{ route('categoryShow', compact('category')) }}">{{__('ui.' . $category->name)}}</a>
                 </button>
             @endforeach
         </div>        

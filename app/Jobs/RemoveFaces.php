@@ -3,13 +3,16 @@
 namespace App\Jobs;
 
 use App\Models\Image;
-use Spatie\Image\Image as SpatieImage;
+use Spatie\Image\Enums\Fit;
 use Illuminate\Bus\Queueable;
+use Spatie\Image\Enums\AlignPosition;
 use Illuminate\Queue\SerializesModels;
+use Spatie\Image\Image as SpatieImage;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
-use Google\Cloud\Vision\V1\Client\ImageAnnotatorClient;
+use Illuminate\Contracts\Queue\ShouldBeUnique;
+use Google\Cloud\Vision\V1\ImageAnnotatorClient;
 
 class RemoveFaces implements ShouldQueue
 {
@@ -22,7 +25,7 @@ private $announcement_image_id;
      */
     public function __construct($announcement_image_id)
     {
-        $this->announcement_image_id;
+        $this->announcement_image_id = $announcement_image_id;
     }
 
     /**
@@ -57,12 +60,10 @@ private $announcement_image_id;
 
             $image = SpatieImage::load($srcPath);
 
-            $image->watermark(base_path('resources/img/monkey.png'))
-                ->watermarkPosition('top-left')
-                ->watermarkPadding($bounds[0][0], $bounds[0][1])
-                ->watermarkWidth($w, Manipulations::UNIT_PIXELS)
-                ->watermarkHeight($h, Manipulations::UNIT_PIXELS)
-                ->watermarkFit(Manipulations::FIT_STRETCH);
+            $image->watermark(base_path('resources/img/monkey.png'),
+            AlignPosition::TopLeft, paddingX:$bounds[0][0], paddingY:$bounds[0][1], width:$w, height:$h, fit:Fit::Stretch
+            
+            );
 
             $image->save($srcPath);    
         } 

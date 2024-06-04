@@ -29,4 +29,5 @@ return [
     'imagesPreview'=>'Preview',
     'delete'=>'Delete',
     'announcementCreateBtn'=>'Create',
+    'Elettronica'=>'Tech',
 ];

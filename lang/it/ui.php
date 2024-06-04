@@ -29,6 +29,7 @@ return [
     'imagesPreview'=>'Anteprima immagine',
     'delete'=>'Cancella',
     'announcementCreateBtn'=>'Crea',
+    'Elettronica'=>'Elettronica',
 
 
 
