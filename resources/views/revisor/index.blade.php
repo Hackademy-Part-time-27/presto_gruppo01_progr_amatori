@@ -26,7 +26,7 @@
                                             <div class="p-2">
                                                 @if ($image->labels)
                                                     @foreach ($image->labels as $label)
-                                                        <p class="d-inline">{{$label}},</p>
+                                                        <p class="d-inline">{{$label}}, </p>
                                                     @endforeach
                                                 @endif        
                                             </div>
@@ -79,7 +79,7 @@
         <div class="card-body ms-3">
             <h5 class="card-title mt-2 mb-2">{{$announcement_to_check->title}}</h5>
             <p class="card-text">{{$announcement_to_check->description}}</p>
-            <p class="card-text">{{$announcement_to_check->price}}&euro;</p>
+            <p class="card-text border-bottom">{{$announcement_to_check->price}}&euro;</p>
             <p class="card-footer">Pubblicato il: {{$announcement_to_check->created_at->format('d/m/Y')}} </p>
 
         </div>
