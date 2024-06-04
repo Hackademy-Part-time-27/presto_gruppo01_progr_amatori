@@ -30,7 +30,7 @@ class FormAnnuncio extends Component
 
     protected $rules = [
         'title'=>'required|min:8',
-        'description'=>'required|min:10',
+        'description'=>'required|min:10|max:255',
         'price'=>'required|numeric',
         'category'=>'required',
         'images.*'=>'image|max:1024',
@@ -41,6 +41,7 @@ class FormAnnuncio extends Component
    protected $messages = [
         'required'=>'Il campo :attribute è richiesto',
         'min'=>'Il campo :attribute deve avere :min caratteri',
+        'max'=>'Il campo :attribute può contenere :max caratteri',
         'numeric'=>'Il campo :attribute deve essere un numero',
         'temporary_images.required'=>'L\'immagine è richiesta',
         'temporary_images.*.image'=>'i file devono essere immagini',

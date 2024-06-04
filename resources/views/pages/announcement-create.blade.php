@@ -2,7 +2,7 @@
     
     
     <div class="container d-flex justify-content-center">
-        <h1>Crea Annuncio</h1>
+        <h1>{{__('ui.createAnnouncement')}}</h1>
     </div>
 
         <div class="container justify-content-center mt-5">

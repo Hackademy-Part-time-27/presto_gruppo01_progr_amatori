@@ -23,7 +23,7 @@
 
       @auth
       <button class="btn btn-outline-success me-3" type="submit" style="background-color:rgb(230,239,230)">
-        <a class="text-decoration-none text-dark fw-bold" href="{{ route('announcements.create') }}">INSERISCI ANNUNCIO</a>
+        <a class="text-decoration-none text-dark fw-bold" href="{{ route('announcements.create') }}">{{__('ui.newAnnouncement')}}</a>
       </button>
       <div class="dropdown me-1">
         <button class="btn btn-secondary dropdown-toggle text-uppercase fw-bold" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -33,7 +33,7 @@
           @if (Auth::user()->is_revisor)
             <li class="nav-item">
               <a class="nav-link btn btn-sm position-relative text-uppercase fw-bold"
-                  aria-current="page" href="{{ route('revisor.index') }}">Zona revisore
+                  aria-current="page" href="{{ route('revisor.index') }}">{{__('ui.revisorArea')}}
                 <span class="position-absolute top-0 start-0 translate-middle badge rounded-pill bg-danger">
                 {{ App\Models\Announcement::toBeRevisionedCount() }}
                 <span class="visually-hidden">Messaggi non letti</span>
@@ -44,7 +44,7 @@
           <li>
             <form action="/logout" method="POST">
             @csrf
-            <button type="submit" class="dropdown-item text-danger text-uppercase fw-bold">Esci</button>
+            <button type="submit" class="dropdown-item text-danger text-uppercase fw-bold">{{__('ui.logout')}}</button>
             </form>
           </li>
         </ul>
