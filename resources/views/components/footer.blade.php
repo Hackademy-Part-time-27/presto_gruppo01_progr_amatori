@@ -6,9 +6,11 @@
             <li class="nav-item">
                 <a href="{{route('announcements.index')}}" class="nav-link px-2 text-muted">{{__('ui.home')}}</a>
             </li>
-            <li class="nav-item">
-                <a href="{{route('form.revisor')}}" class="nav-link px-2 text-muted">{{__('ui.career')}}</a>
-            </li>
+            @if (!Auth::user()->is_revisor)
+                <li class="nav-item">
+                    <a href="{{route('form.revisor')}}" class="nav-link px-2 text-muted">{{__('ui.career')}}</a>
+                </li>
+            @endif
             <li class="nav-item">
                 <a href="" class="nav-link px-2 text-muted">Privacy</a>
             </li>

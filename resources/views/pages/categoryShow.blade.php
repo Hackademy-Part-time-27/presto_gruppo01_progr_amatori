@@ -1,10 +1,10 @@
 <x-layout>
     <div class="d-flex justify-content-center mt-1"></div>
         <div class="d-flex justify-content-evenly mb-5">
-            @foreach ($categories as $category)
+            @foreach ($categories as $categoria)
                 <button class="btn text-uppercase fw-bold shadow" type="button" style=" width: 160px;
                         background-color: #79B791; color: white; cursor: pointer;">
-                <a class="text-decoration-none text-light" href="{{ route('categoryShow', compact('category')) }}">{{__('ui.' . $category->name)}}</a>
+                <a class="text-decoration-none text-light" href="{{ route('categoryShow', ['category'=>$categoria]) }}">{{__('ui.' . $categoria->name)}}</a>
                 </button>
             @endforeach
         </div>        
@@ -16,9 +16,9 @@
             <div class="row">
                 @forelse ($acceptedAnnouncements as $announcement)
                         <div class="col-12 col-md-4 my-4">
-                            <div class="card shadow" style="width: 400px; height: 300px">
+                            <div class="card shadow" style="width: 400px;">
                                 <img src="{{!$announcement->images()->get()->isEmpty() ? $announcement->images()->first()->getUrl(400, 300) 
-                                : 'https://picsum.photos/200'}}"  class="card-img-top p-3 rounded" alt="">
+                                : 'https://picsum.photos/200'}}"  class="card-img-top p-3 rounded bg-white" alt="">
                                 <div class="card-body">
                                     <h5 class="card-title">{{$announcement->title}}</h5>
                                     <p class="card-text">{{$announcement->description}}</p>

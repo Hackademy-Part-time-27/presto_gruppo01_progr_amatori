@@ -7,6 +7,7 @@ use Spatie\Image\Enums\Fit;
 use Spatie\Image\Enums\Unit;
 use Illuminate\Bus\Queueable;
 use Spatie\Image\Enums\CropPosition;
+use Spatie\Image\Enums\AlignPosition;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
@@ -43,8 +44,8 @@ class ResizeImage implements ShouldQueue
 
         $croppedImage = Image::load($scrPath)
                         ->crop($w, $h, CropPosition::Center)
-                        ->watermark('public/img/logopresto.png',alpha: 80, width:15,widthUnit:Unit::Percent,
-                        height:9,heightUnit:Unit::Percent, fit: Fit::Stretch)
+                        ->watermark('public/img/logopresto.png', AlignPosition::Center, alpha: 50, width:15,widthUnit:Unit::Percent,
+                        height:9,heightUnit:Unit::Percent, fit: Fit::Contain)
                         ->save($destPath);
     }
 }
