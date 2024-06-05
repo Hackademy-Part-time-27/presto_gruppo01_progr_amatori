@@ -15,14 +15,16 @@
         <h1>{{ $announcement->title }}</h1>
     </div>
 
-    <div class="container mt-4">
+    <div class="container mt-5">
         <div class="row">
-            <div id="showCarousel" class="carousel" data-bs-ride="carousel">
+            <div id="showCarousel" class="carousel slide" data-bs-ride="carousel">
             @if ($announcement->images)
                     <div class="carousel-inner">
                         @foreach ($announcement->images as $image)
-                            <div class="carousel-item @if($loop->first)active @endif">
-                                <img src="{{$image->getUrl(400, 300)}}" alt="" class="img-fluid p-3 rounded">
+                            <div class="carousel-item @if($loop->first)active @endif" style="height: 300px;">
+                                <div class="d-flex justify-content-center align-items-center">
+                                    <img src="{{$image->getUrl(400, 300)}}" alt="" class="img-fluid">
+                                </div>
                             </div>
                         @endforeach
                     </div>
@@ -56,7 +58,7 @@
             </div>
         </div>
     </div>
-    <div class="container">
+    <div class="container mt-5">
         <div class="card-body">
             <h5 class="card-title mt-2 mb-2">{{$announcement->title}}</h5>
             <p class="card-text">{{$announcement->description}}</p>
