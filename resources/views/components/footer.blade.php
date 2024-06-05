@@ -6,7 +6,11 @@
             <li class="nav-item">
                 <a href="{{route('announcements.index')}}" class="nav-link px-2 text-muted">{{__('ui.home')}}</a>
             </li>
-            @if (!Auth::user()->is_revisor)
+            @if (Auth::user())
+                @if (Auth::user()->is_revisor)
+                <li></li>
+                @endif   
+            @else
                 <li class="nav-item">
                     <a href="{{route('form.revisor')}}" class="nav-link px-2 text-muted">{{__('ui.career')}}</a>
                 </li>
