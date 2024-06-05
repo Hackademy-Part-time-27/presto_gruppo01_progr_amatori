@@ -29,7 +29,17 @@ return [
     'imagesPreview'=>'Anteprima immagine',
     'delete'=>'Cancella',
     'announcementCreateBtn'=>'Crea',
+    'Vestiario'=>'Vestiario',
+    'Giochi'=>'Giochi',
+    'Auto'=>'Auto',
+    'Immobili'=>'Immobili',
+    'Mobili'=>'Mobili',
     'Elettronica'=>'Elettronica',
+    'Musica'=>'Musica',
+    'Sport'=>'Sport',
+    'Collezionismo'=>'Collezionismo',
+    'Telefonia'=>'Telefonia',
+    
 
 
 

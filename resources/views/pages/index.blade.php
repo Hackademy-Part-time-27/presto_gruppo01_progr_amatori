@@ -34,7 +34,7 @@
                                             class="btn mb-3 me-2" style="background-color: #ffb300; color: black; cursor: pointer;">{{__('ui.details')}}</a>
                                     <a href="{{ route('categoryShow', compact('category')) }}" 
                                             class="btn mb-3" style="background-color: #79B791; color: white; cursor: pointer; 
-                                            width: 160px">{{$announcement->category->name}}</a>
+                                            width: 160px">{{__('ui.' . $announcement->category->name)}}</a>
                                      <p class="card-footer">{{__('ui.publication')}} {{$announcement->created_at->format('d/m/Y')}}</p>
                                 </div>
                             </div>

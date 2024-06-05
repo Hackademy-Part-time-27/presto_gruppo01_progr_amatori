@@ -5,7 +5,7 @@
             @foreach ($categories as $category)
                 <button class="btn text-uppercase fw-bold shadow" type="button" style=" width: 160px;
                         background-color: #79B791; color: white; cursor: pointer;">
-                <a class="text-decoration-none text-light" href="{{ route('categoryShow', compact('category')) }}">{{($category->name)}}</a>
+                <a class="text-decoration-none text-light" href="{{ route('categoryShow', compact('category')) }}">{{__('ui.' . $category->name)}}</a>
                 </button>
             @endforeach
         </div>        
@@ -61,8 +61,8 @@
             <h5 class="card-title mt-2 mb-2">{{$announcement->title}}</h5>
             <p class="card-text">{{$announcement->description}}</p>
             <p class="card-text">{{$announcement->price}}&euro;</p>
-            <p class="card-text">{{$announcement->category->name}}</p>
-             <p class="card-footer">Pubblicato il: {{$announcement->created_at->format('d/m/Y')}} </p>
+            <p class="card-text">{{__('ui.' . $announcement->category->name)}}</p>
+             <p class="card-footer"> {{__('ui.publication') }} {{$announcement->created_at->format('d/m/Y')}} </p>
     
         </div>
     </div>

@@ -1,8 +1,18 @@
 <x-layout>
+    <div class="d-flex justify-content-center mt-1"></div>
+        <div class="d-flex justify-content-evenly mb-5">
+            @foreach ($categories as $category)
+                <button class="btn text-uppercase fw-bold shadow" type="button" style=" width: 160px;
+                        background-color: #79B791; color: white; cursor: pointer;">
+                <a class="text-decoration-none text-light" href="{{ route('categoryShow', compact('category')) }}">{{__('ui.' . $category->name)}}</a>
+                </button>
+            @endforeach
+        </div>        
+    </div>   
 <div class="container mt-5">
     <div class="row">
         <div class="col-12 text-center">
-            <h1>{{__('ui.categoryAnnouncements')}} {{$category->name}}</h1>
+            <h1>{{__('ui.categoryAnnouncements')}} {{__('ui.' . $category->name)}}</h1>
             <div class="row">
                 @forelse ($acceptedAnnouncements as $announcement)
                         <div class="col-12 col-md-4 my-4">
@@ -17,7 +27,7 @@
                                             class="btn mb-3 me-2" style="background-color: #ffb300; color: black; cursor: pointer;">{{__('ui.details')}}</a>
                                     <a href="{{ route('categoryShow', compact('category')) }}" 
                                             class="btn mb-3" style="background-color: #79B791; color: white; cursor: pointer; 
-                                            width: 160px">{{$announcement->category->name}}</a>
+                                            width: 160px">{{__('ui.' . $announcement->category->name)}}</a>
                                      <p class="card-footer">{{__('ui.publication')}} {{$announcement->created_at->format('d/m/Y')}}</p>
                                 </div>
                             </div>
