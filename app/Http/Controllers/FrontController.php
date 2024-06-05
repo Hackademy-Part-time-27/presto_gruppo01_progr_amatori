@@ -27,7 +27,7 @@ class FrontController extends Controller
 
         $announcements = Announcement::Search($request->searched)->where('is_accepted', true)->orderBy('created_at', 'desc')->paginate(10);
         
-        return view('pages/index', compact('announcements'));
+        return view('pages/searched-announcement', ['announcements'=>$announcements, 'request'=>$request->searched]);
     }
 
     public function setLanguage($lang)

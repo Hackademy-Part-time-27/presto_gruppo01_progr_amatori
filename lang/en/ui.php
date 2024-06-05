@@ -39,4 +39,5 @@ return [
     'Sport'=>'Sport',
     'Collezionismo'=>'Collectibles',
     'Telefonia'=>'Mobiles',
+    'searchAnnouncement'=>'Results for: '
 ];

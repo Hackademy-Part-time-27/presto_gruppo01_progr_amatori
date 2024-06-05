@@ -39,6 +39,7 @@ return [
     'Sport'=>'Sport',
     'Collezionismo'=>'Collezionismo',
     'Telefonia'=>'Telefonia',
+    'searchAnnouncement'=>'Risultati per: '
     
 
 
