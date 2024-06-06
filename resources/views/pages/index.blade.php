@@ -1,10 +1,10 @@
 
 <x-layout>
-    <div class="d-flex justify-content-center mt-1"></div>
-        <div class="d-flex justify-content-evenly mb-5">
+    <div class="container mt-1">
+        <div class="d-flex flex-wrap justify-content-center mb-5">
             @foreach ($categories as $category)
-                <button class="btn text-uppercase fw-bold shadow" type="button" style=" width: 160px;
-                        background-color: #79B791; color: white; cursor: pointer;">
+                <button class="btn text-uppercase fw-bold shadow m-2" type="button" 
+                        style="background-color: #79B791; color: white; cursor: pointer;">
                 <a class="text-decoration-none text-light" href="{{ route('categoryShow', compact('category')) }}">{{__('ui.' . $category->name)}}</a>
                 </button>
             @endforeach
@@ -15,15 +15,13 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-12 text-center">
-                <h1>
-                {{__('ui.welcome')}}
-                </h1>
+            <div class="col-sm-12 text-center">
+                <h1>{{__('ui.welcome')}}</h1>
                 <h2>{{__('ui.allAnnouncements')}}</h2>
                 <div class="row">
                     @forelse ($announcements as $announcement)
-                        <div class="col-12 col-md-4 my-4">
-                            <div class="card shadow" style="width: 400px;">
+                        <div class="col-12 col-md-6 col-lg-4 my-4">
+                            <div class="card shadow h-100">
                                 <img src="{{!$announcement->images()->get()->isEmpty() ? $announcement->images()->first()->getUrl(400, 300) 
                                 : 'https://picsum.photos/200'}}"  class="card-img-top p-3 rounded" alt="">
                                 <div class="card-body">

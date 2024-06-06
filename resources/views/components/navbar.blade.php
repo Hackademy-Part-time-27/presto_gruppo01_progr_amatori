@@ -1,7 +1,6 @@
 
 
-<div class="mb-5">
-  <nav class="navbar navbar-expand-lg" style="background-color:rgb(121,183,145)" >
+  <nav class="navbar navbar-expand-lg mb-5" style="background-color:rgb(121,183,145)" >
     
     <div class="display-flex" style="text-align:center">
       <h1 class="navbar-brand" style="color:rgb(230,239,230)">
@@ -76,4 +75,3 @@
       </ul>
   </div>    
   </nav>
-</div>
