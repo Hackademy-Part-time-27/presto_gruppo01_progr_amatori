@@ -104,5 +104,39 @@
     </div>
 @endif
 
+@if ($rejected_announcements->isNotEmpty())
+    <div class="container mt-5">
+        <h2>Annunci rifiutati</h2>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">titolo</th>
+                    <th scope="col">descrizione</th>
+                    {{--<th scope="col">pubblicato da</th>--}}
+                    <th scope="col">azioni</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach ($rejected_announcements as $announcement)
+                    <tr>
+                        <th scope="row">{{ $announcement->id }}</th>
+                        <td>{{ $announcement->title }}</td>
+                        <td>{{ $announcement->description }}</td>
+                        {{--<td>{{ $announcement->user->name }}</td>--}}
+                        <td>
+                            <form action="{{ route('announcement.revise', $announcement) }}" method="POST">
+                                @csrf
+                                <button type="submit" class="btn mb-3" style="background-color: red; color: white; cursor: pointer;">
+                                    <span class="fa-solid fa-eye"></span>
+                                </button>
+                            </form>
+                        </td>
+                    </tr>                    
+                @endforeach
+            </tbody>
+        </table>
+    </div>
+@endif
 
 </x-layout>
