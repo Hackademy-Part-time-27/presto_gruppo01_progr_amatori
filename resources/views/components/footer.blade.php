@@ -8,7 +8,10 @@
             </li>
             @if (Auth::user())
                 @if (Auth::user()->is_revisor)
-                <li></li>
+                @else
+                <li class="nav-item">
+                    <a href="{{route('form.revisor')}}" class="nav-link px-2 text-muted">{{__('ui.career')}}</a>
+                </li>
                 @endif   
             @else
                 <li class="nav-item">

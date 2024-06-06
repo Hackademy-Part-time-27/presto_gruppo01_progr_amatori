@@ -1,13 +1,13 @@
 <nav class="navbar navbar-expand-lg navbar-light mb-5" style="background-color:rgb(121,183,145); height: 70px;">
   <div class="container-fluid">
       <a class="navbar-brand ms-4" href="{{ route('announcements.index') }}">
-          <img class="img-fluid" style="margin-left:10px; max-height: 50px;" src="{{ asset('img/logopresto.png') }}" alt="logo">
+          <img class="img-fluid" style="max-height: 35px;" src="{{ asset('img/logopresto.png') }}" alt="logo">
       </a>
       <button class="navbar-toggler border border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="fa-solid fa-bolt fa-xl"></span>
       </button>
-      <div class="offcanvas offcanvas-end w-25" tabindex="-1" id="navbarNav" aria-labelledby="navbarNavLabel" style="background-color:rgb(230, 239, 230);">
+      <div class="offcanvas offcanvas-end w-50" tabindex="-1" id="navbarNav" aria-labelledby="navbarNavLabel" style="background-color:rgb(230, 239, 230);">
           <div class="offcanvas-header">
               <h5 class="offcanvas-title" id="navbarNavLabel">Presto</h5>
               <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -16,7 +16,7 @@
               <ul class="navbar-nav ms-auto">
                   <li class="nav-item">
                       <form action="{{ route('announcements.search') }}" method="GET" class="d-flex" role="search">
-                          <input class="form-control form-control-sm me-2 mt-1" name="searched" type="search"
+                          <input class="form-control form-control-sm me-2" name="searched" type="search"
                               placeholder="{{ __('ui.search') }}" aria-label="Search" style="max-width: 150px; height: 40px;">
                           <button type="submit" class="btn btn-sm mt-1 me-2" style="height: 40px;">
                               <span class="fa-solid fa-magnifying-glass fa-xl"></span>

@@ -29,7 +29,7 @@
                     <div class="row g-3">
                         <div class="mb-3 col-12">
                             <label for="email" class="text-uppercase fw-bold">Email</label>
-                            <input type="email" class="form-control" aria-describedby="emailHelp">
+                            <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="{{ auth()->user()->email }}" readonly>
                         </div>
                     </div>
                     <div class="d-flex justify-content-center mt-5">
