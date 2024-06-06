@@ -1,7 +1,7 @@
 <x-layout>
 <div class="container-fluid">
     <div class="row">
-        <div class="col-12">
+        <div class="col-12 text-center">
             <h1>
                 {{ $announcement_to_check ? 'Annuncio da revisionare' : 'Non ci sono annunci da revisionare' }}
             </h1>

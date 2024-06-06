@@ -30,7 +30,17 @@
                                     <a href="{{ route('categoryShow', compact('category')) }}" 
                                             class="btn mb-3" style="background-color: #79B791; color: white; cursor: pointer; 
                                             width: 160px">{{$announcement->category->name}}</a>
-                                     <p class="card-footer">{{__('ui.publication')}} {{$announcement->created_at->format('d/m/Y')}}</p>
+                                    @auth
+                                        @if (Auth::user()->is_revisor)
+                                            <form class="ms-1" action="{{ route('announcement.revise', $announcement) }}" method="POST">
+                                                @csrf
+                                                <button type="submit" class="btn mb-3 " style="background-color: red; color: white; cursor: pointer;">
+                                                    <span class="fa-solid fa-eye"></span>
+                                                </button>
+                                            </form>
+                                        @endif
+                                    @endauth
+                                    <p class="card-footer">{{__('ui.publication')}} {{$announcement->created_at->format('d/m/Y')}}</p>
                                 </div>
                             </div>
                         </div>
